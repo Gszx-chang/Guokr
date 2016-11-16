@@ -5,16 +5,26 @@
 
 window.onload=function(){
 	
-//其他下拉列表
+//下拉列表
+
     var oth=document.getElementById("navOth");
 	var others=document.getElementById("navOthers");	
-	
-	oth.onmouseenter=function(){
-		var y=this.offsetHeight;
-		var x=this.offsetLeft;
+	var y=oth.offsetHeight;
+	var x=oth.offsetLeft;
+	others.style.top=y-20+"px";
+	others.style.left=x-10+"px";
+		
+    var $oth=$(oth),$others=$(others);
+	$oth.mouseenter(function(){
+		$others.slideDown(1000);		
+	})
+	$oth.mouseleave(function(){
+		$others.slideUp(1000);
+	})
+
+		
+/*	oth.onmouseenter=function(){
         others.style.display="block";
-		others.style.top=y-20+"px";
-		others.style.left=x-10+"px";
         var h=0;
 		var i=setInterval(addh,8);
 		function addh(){
@@ -36,9 +46,8 @@ window.onload=function(){
 				clearInterval(i);
 				others.style.display="none";
 			}
-		
 		}
-	}
+	}*/
 	
 	
 //推荐轮播
