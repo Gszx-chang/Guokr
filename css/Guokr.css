@@ -445,7 +445,11 @@
 	color:#CCC;
 	}
 
-	
+
+div[name="groups"]{
+	height: 195px;
+	margin-top: 25px;
+}
 	
 .download{
 	float:right;
